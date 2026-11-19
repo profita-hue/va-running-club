@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VA Running Club</title>
+<meta name="description" content="Sortie running gratuite chaque samedi à 15h à Serris (77700). Tous niveaux.">
+<meta property="og:title" content="VA Running Club">
+<meta property="og:description" content="Sortie running gratuite chaque samedi à 15h à Serris. Tous niveaux.">
+<meta property="og:image" content="logo.png">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800;900&family=Montserrat:wght@400;500;600&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F5EFE4}
+a{text-decoration:none}
+button,input{font-family:'Montserrat',system-ui,sans-serif}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #141414;outline-offset:2px}
+a.btn:hover,button.btn:hover{filter:brightness(1.12)}
+</style>
+</head>
+<body>
+<div style="width:100%;background:#F5EFE4;font-family:'Montserrat',system-ui,sans-serif;color:#141414">
+
+  <!-- HERO -->
+  <div style="display:flex;justify-content:center;padding:0 24px;background:#F5EFE4">
+    <div style="width:100%;max-width:560px;display:flex;flex-direction:column;gap:28px;padding:16px 0 48px">
+      <img src="logo.png" alt="Logo VA Victory Academy Running Club" style="display:block;width:100%;max-width:440px;height:auto;align-self:center;margin:-24px 0 -20px">
+
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:inline-flex;align-self:flex-start;background:#7B1E22;color:#F5EFE4;font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding:7px 12px">Gratuit · Tous niveaux</div>
+        <h1 style="margin:0;font-family:'Playfair Display',serif;font-weight:900;text-transform:uppercase;font-size:clamp(44px,12.5vw,72px);line-height:.98;color:#7B1E22;text-wrap:balance">Chaque samedi, on court.</h1>
+        <p style="margin:0;font-size:17px;line-height:1.55;color:#3A332D;max-width:46ch">Une sortie running en groupe à Serris. Tu viens, tu cours à ton allure, tu repars avec de l'énergie pour la semaine suivante.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#141414;border:1px solid #141414">
+        <div style="background:#F5EFE4;padding:14px 12px;display:flex;flex-direction:column;gap:6px">
+          <span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#5A4F46;font-weight:600">Jour</span>
+          <span style="font-family:'Playfair Display',serif;font-weight:900;font-size:22px;line-height:1">Samedi</span>
+        </div>
+        <div style="background:#F5EFE4;padding:14px 12px;display:flex;flex-direction:column;gap:6px">
+          <span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#5A4F46;font-weight:600">Heure</span>
+          <span style="font-family:'Playfair Display',serif;font-weight:900;font-size:22px;line-height:1">15h00</span>
+        </div>
+        <div style="background:#F5EFE4;padding:14px 12px;display:flex;flex-direction:column;gap:6px">
+          <span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#5A4F46;font-weight:600">Ville</span>
+          <span style="font-family:'Playfair Display',serif;font-weight:900;font-size:22px;line-height:1">Serris</span>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <a class="btn" href="https://forms.gle/EWmz955jaAdasBzT6" style="display:flex;align-items:center;justify-content:center;min-height:56px;background:#7B1E22;color:#F5EFE4;font-weight:600;font-size:14px;letter-spacing:.18em;text-transform:uppercase">Réserver ma place</a>
+        <a class="btn" href="https://www.instagram.com/va.runningclub/" style="display:flex;align-items:center;justify-content:center;min-height:52px;border:2px solid #141414;color:#141414;font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase">Suivre @va.runningclub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROCHAINE SEANCE + RESERVATION -->
+  <div id="reserver" style="display:flex;justify-content:center;padding:0 24px;background:#7B1E22;color:#F5EFE4">
+    <div style="width:100%;max-width:560px;display:flex;flex-direction:column;gap:24px;padding:48px 0">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#E9D9C8">Prochaine séance</span>
+        <div style="font-family:'Playfair Display',serif;font-weight:900;text-transform:uppercase;font-size:40px;line-height:1.02"><span id="next-date">Samedi</span></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:16px">
+          <span style="font-weight:600">15h00</span>
+          <span>·</span>
+          <span>Serris (77700)</span>
+          <span style="background:#F5EFE4;color:#7B1E22;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px">Gratuit</span>
+        </div>
+      </div>
+
+      <div style="background:#F5EFE4;color:#141414;padding:24px;display:flex;flex-direction:column;gap:18px">
+        <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:28px;line-height:1.05;color:#7B1E22">Je réserve ma place</div>
+        <p style="margin:0;font-size:16px;line-height:1.5">Remplis le formulaire avec ton nom, ton prénom et ton e-mail. Ça prend une minute.</p>
+        <a class="btn" href="https://forms.gle/EWmz955jaAdasBzT6" style="display:flex;align-items:center;justify-content:center;min-height:56px;background:#7B1E22;color:#F5EFE4;font-weight:600;font-size:14px;letter-spacing:.18em;text-transform:uppercase">Ouvrir le formulaire</a>
+        <p style="margin:0;font-size:13px;line-height:1.45;color:#5A4F46">Réservation gratuite. Pas de compte à créer.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIEU -->
+  <div style="display:flex;justify-content:center;padding:0 24px;background:#F5EFE4">
+    <div style="width:100%;max-width:560px;display:flex;flex-direction:column;gap:20px;padding:48px 0">
+      <span style="font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#5A4F46">Où nous retrouver</span>
+      <div style="font-family:'Playfair Display',serif;font-weight:900;text-transform:uppercase;font-size:52px;line-height:.98;color:#7B1E22">Serris<br>77700</div>
+      <div style="border:2px solid #141414;padding:18px;display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#5A4F46;font-weight:600">Point de rendez-vous</span>
+        <span style="font-size:17px;line-height:1.45">Victory Academy<br>7 Boulevard Robert Thiboust<br>77700 Serris</span>
+      </div>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Victory+Academy+7+Boulevard+Robert+Thiboust+77700+Serris" style="display:flex;align-items:center;justify-content:center;min-height:52px;border:2px solid #141414;color:#141414;font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase">Ouvrir dans Maps</a>
+    </div>
+  </div>
+
+  <!-- VALEURS -->
+  <div style="display:flex;justify-content:center;padding:0 24px;background:#7B1E22;color:#F5EFE4">
+    <div style="width:100%;max-width:560px;display:flex;flex-direction:column;gap:0;padding:44px 0 48px">
+      <div style="display:flex;flex-direction:column;gap:6px;padding:20px 0;border-top:1px solid #E9D9C8">
+        <span style="font-family:'Cormorant Garamond',serif;font-weight:700;text-transform:uppercase;letter-spacing:.24em;font-size:26px;line-height:1.1">Discipline</span>
+        <span style="font-size:16px;line-height:1.5;color:#F5EFE4">Un rendez-vous fixe, chaque samedi à 15h.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;padding:20px 0;border-top:1px solid #E9D9C8">
+        <span style="font-family:'Cormorant Garamond',serif;font-weight:700;text-transform:uppercase;letter-spacing:.24em;font-size:26px;line-height:1.1">Mouvement</span>
+        <span style="font-size:16px;line-height:1.5;color:#F5EFE4">On court ensemble, chacun à son allure.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;padding:20px 0;border-top:1px solid #E9D9C8;border-bottom:1px solid #E9D9C8">
+        <span style="font-family:'Cormorant Garamond',serif;font-weight:700;text-transform:uppercase;letter-spacing:.24em;font-size:26px;line-height:1.1">Partage</span>
+        <span style="font-size:16px;line-height:1.5;color:#F5EFE4">Des sorties gratuites, ouvertes à tous les niveaux.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="display:flex;justify-content:center;padding:0 24px;background:#141414;color:#F5EFE4">
+    <div style="width:100%;max-width:560px;display:flex;flex-direction:column;gap:14px;padding:36px 0 44px">
+      <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:22px;text-transform:uppercase;line-height:1">VA Running Club</div>
+      <div style="font-size:14px;line-height:1.6;color:#D9CFC0">Club de running basé à Serris, lié à Victory Academy.</div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:14px;font-weight:600">
+        <a href="https://www.instagram.com/va.runningclub/" style="color:#F5EFE4;border-bottom:2px solid #F5EFE4;padding-bottom:2px">@va.runningclub</a>
+        <a href="https://www.instagram.com/victory_academy_serris/" style="color:#F5EFE4;border-bottom:2px solid #F5EFE4;padding-bottom:2px">@victory_academy_serris</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script>
+(function(){
+  var now=new Date(), d=new Date(now), add=(6-d.getDay()+7)%7;
+  if(add===0 && now.getHours()>=15) add=7;
+  d.setDate(d.getDate()+add);
+  var s=d.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'});
+  document.getElementById('next-date').textContent=s.charAt(0).toUpperCase()+s.slice(1);
+})();
+</script>
+</body>
+</html>
